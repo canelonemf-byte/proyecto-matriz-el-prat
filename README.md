@@ -1,85 +1,46 @@
-# 🏛️ Proyecto Matriz El Prat de Llobregat
-> **Propuesta Ciudadana Independiente para la Optimización Presupuestaria, Transparencia y Mejora de Servicios Públicos**
+# proyecto-matriz-el-prat
 
-**Versión 1.7.2** — 2026-10-30
+Proyecto Matriz El Prat — propuesta ciudadana independiente (Streamlit v1.7.2)
 
----
+## Autoría
 
-### ⚠️ AVISO DE DESVINCULACIÓN INSTITUCIONAL E INDEPENDENCIA
-Este proyecto es una **iniciativa privada, individual e independiente** elaborada a título personal por **Lázaro López Paz** (El Prat de Llobregat, Barcelona, España), con asistencia de inteligencia artificial.
+- **Autor:** Lázaro López Paz, El Prat de Llobregat, Barcelona, España
+- **ORCID:** [0000-0001-8601-1963](https://orcid.org/0000-0001-8601-1963)
+- Elaborado con asistencia de inteligencia artificial
+- Sin afiliaciones institucionales
 
-* **Sin relación oficial:** Este trabajo **NO** representa, **NO** está vinculado ni cuenta con el patrocinio del **Ayuntamiento de El Prat de Llobregat**.
-* **Finalidad:** Divulgación ciudadana de ideas de gestión financiera y optimización tributaria.
+## Estado
 
----
+Proyecto en desarrollo / documentación. No afirmar validación experimental salvo que el código o los informes del propio repositorio lo demuestren.
 
-## 📌 Resumen del Ecosistema
-
-El proyecto articula **12 iniciativas ciudadanas independientes** diseñadas bajo una **Regla de Oro Presupuestaria de Cero Déficit y Cero Subidas de Impuestos para los Residentes**. El balance ordinario estimado (excluyendo la inversión plurianual VPO) es de **+300.000 €/año**.
-
-1. **Rebaja del IBI Residencial al 0,48%** (PRAT-FIS-001, −2,7 M€). El ahorro familiar es el **0,14% del valor catastral** (p. ej. **126 €/año** con 90.000 €; **280–540 €/año** con 200.000–386.000 €).
-2. **Recargo del IBI BICS al 1,30%** para AENA / Puerto de Barcelona (PRAT-FIS-002, Art. 72.2 TRLRHL, **+6,1 M€/año**).
-3. **Bonificación del 40% en la Tasa de Residuos** por Pago por Generación / PxG (PRAT-ECO-001, −1,2 M€).
-4. **Tarjeta de Movilidad Laboral Mas Blau** (PRAT-URB-001, impacto 0 € en presupuesto ordinario).
-5. **Plan 1.500 VPO** en Eixample Sud y ARE (PRAT-VIV-001, −54 M€): **inversión plurianual fuera del presupuesto ordinario**.
-6. **Bloqueo tecnológico en Gestiona** por falta de expediente previo (PRAT-LEG-001; borrador de moción ciudadana).
-7. **Plan de Shock de Limpieza**, hidrolimpieza y control GPS/NFC a la contrata (PRAT-LIM-001).
-8. **Control de incivismo canino** y neutralización de orines **sin ADN** (PRAT-LIM-002, +0,15 M€).
-9. **Impuesto de Perros con devolución 100%** condicionada a evidencia de limpieza y uso de pipican (PRAT-LIM-003, +0,45 M€).
-10. **Complemento salarial dignificador** para +600 trabajadores de servicios públicos (PRAT-SAL-001, −1,8 M€).
-11. **Programa Bono-Comercio Prat** (PRAT-COM-001, −0,7 M€).
-12. **Plan de Excelencia en Servicios Públicos** (PRAT-SER-001, impacto 0 €).
-
----
-
-## 📁 Estructura del Repositorio
+## Contenido (raíz)
 
 ```
-.
-├── app.py                                  # Aplicación interactiva web (Streamlit)
-├── api_grok_bridge.py                      # Bridge FastAPI para sincronización con Grok
-├── base_datos_master_mejoras_el_prat.json  # Base de datos central (v1.7.2)
-├── proyecto_matriz_el_prat.json            # Definición de la matriz de agentes
-├── el_prat_multi_agent_system.py           # Orquestador Python multi-agente
-├── requirements.txt                        # Dependencias
-├── .github/workflows/auditoria_diaria.yml  # Auditoría diaria (cron UTC) + push + manual
-└── README.md                               # Documentación principal
+__pycache__/
+api_grok_bridge.py
+app.py
+base_datos_master_mejoras_el_prat.json
+el_prat_multi_agent_system.py
+proyecto_matriz_el_prat.json
+README.md
+requirements.txt
 ```
 
----
+## Instalación
 
-## 🚀 Instalación y Ejecución Local
-
-### 1. Clonar el repositorio
-```bash
-git clone https://github.com/canelonemf-byte/proyecto-matriz-el-prat.git
-cd proyecto-matriz-el-prat
-```
-
-### 2. Instalar dependencias
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Ejecutar la aplicación gráfica interactiva (Streamlit)
-```bash
-streamlit run app.py
-```
-Abre tu navegador en `http://localhost:8501`.
 
-### 4. (Opcional) Ejecutar el diagnóstico CLI
-```bash
-python el_prat_multi_agent_system.py
-```
+## Uso
 
-### 5. (Opcional) Bridge FastAPI
-```bash
-uvicorn api_grok_bridge:app --reload --port 8000
-```
+Archivos Python principales (revisar cada uno antes de ejecutar):
+- `api_grok_bridge.py`
+- `app.py`
+- `el_prat_multi_agent_system.py`
 
----
 
-## 🔗 Recursos y Enlaces Públicos
+## Licencia
 
-* **Cuaderno Interactivo en NotebookLM:** [Proyecto Matriz El Prat: Gobernanza, Finanzas y Servicios Municipales](https://notebooklm.google.com/notebook/0313f51e-758b-4d6d-80f1-2a29ce453165)
-* **Autoría:** Lázaro López Paz, El Prat de Llobregat, Barcelona, España, con asistencia de inteligencia artificial
+Ver archivo `LICENSE` (o `LICENSE.md`) en la raíz. Documentación bajo CC BY 4.0 cuando aplique; código habitualmente MIT, salvo indicación contraria.
